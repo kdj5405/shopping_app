@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/pages/product_detail_page';
 
 class ProductListPage extends StatefulWidget {
   const ProductListPage({Key? key}) : super(key: key);
@@ -155,8 +156,17 @@ void _showPopupMenu(BuildContext context) {
               child: ListView.builder(
                 itemCount: sortedProducts.length,
                 itemBuilder: (context, index) {
-                  final product = sortedProducts[index];
-                  return Container(
+                final product = sortedProducts[index];
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => ProductDetailPage(product: product),
+                      ),
+                    );
+                  },
+                  child: Container(
                     margin: const EdgeInsets.only(bottom: 16),
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
@@ -175,8 +185,9 @@ void _showPopupMenu(BuildContext context) {
                         Text('\$${product['price']}', style: const TextStyle(fontWeight: FontWeight.bold)),
                       ],
                     ),
-                  );
-                },
+                  ),
+                );
+              },
               ),
             ),
           ],

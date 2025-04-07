@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   initialRoute: '/product_list_page',
   routes: {
     '/product_list_page': (context) => const ProductListPage(),
-    '/product_detail_page': (context) => const ProductDetailPage(),
+    '/product_detail_page': (context) => ProductDetailPage(),
   //  '/landing_page': (context) => const LandingPage(),
   //  '/my_cart': (context) => const MyCartPage(),
   //  '/menu_label': (context) => const MenuLabelPage(),

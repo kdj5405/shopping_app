@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/pages/product_detail_page';
 
 class ProductListPage extends StatefulWidget {
   const ProductListPage({Key? key}) : super(key: key);
@@ -159,11 +158,12 @@ void _showPopupMenu(BuildContext context) {
                 final product = sortedProducts[index];
                 return GestureDetector(
                   onTap: () {
-                    Navigator.push(
+
+                    Navigator.pushNamed(
                       context,
-                      MaterialPageRoute(
-                        builder: (_) => ProductDetailPage(product: product),
-                      ),
+                      '/product_detail_page',
+                      arguments: product,
+
                     );
                   },
                   child: Container(

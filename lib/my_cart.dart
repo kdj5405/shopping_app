@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CartPage extends StatelessWidget {
+class mycartpage extends StatelessWidget {
   final List<Map<String, dynamic>> cartItems = [
     {"name": "티셔츠", "price": 30000},
     {"name": "청바지", "price": 50000},

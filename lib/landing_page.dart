@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ProductRegisterPage extends StatefulWidget {
+class landingpage extends StatefulWidget {
   @override
-  _ProductRegisterPageState createState() => _ProductRegisterPageState();
+  _landingpageState createState() => _landingpageState();
 }
 
-class _ProductRegisterPageState extends State<ProductRegisterPage> {
+class _landingpageState extends State<landingpage> {
   final _formKey = GlobalKey<FormState>();
   String name = '';
   String description = '';
